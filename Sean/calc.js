@@ -1,6 +1,9 @@
 //assigning html elements to variables
 let i = document.getElementById('calcInput');
 let e = document.getElementById('equals');
+let numeric = "0123456789";
+let operator = "+-*/^";
+
 //the operator functions.
 function add (a,b) {
   return Number(a)+Number(b);
@@ -19,7 +22,7 @@ function pow(a,b) {
 }
 //Checks if its a numeral or operator with two functions.
 function isNumeral(char) {
-  if (char == '0' || char == '1' || char == '2' || char == '3' || char == '4' || char == '5' || char == '6' || char == '7' || char == '8' || char == '9' || char == '.') {
+  if (numeric.includes(char)) {
     return true;
   }
   return false;
